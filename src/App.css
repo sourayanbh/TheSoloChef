@@ -1,0 +1,209 @@
+.App {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.HomePage{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.60),rgba(0,0,0,0.60)),url("./Components/Images/image4.png");
+  background-size: cover;
+}
+
+.BrandName{
+  text-decoration: solid;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.HomePageNavbar{
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.navLinks{
+  margin: 0 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+.navLinks::after{
+  content: "";
+  height: 3px;
+  width: 0%;
+  background: #009688;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s;
+}
+
+.navLinks:hover::after{
+  width: 100%;
+}
+
+.HomePageContent{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: white;
+}
+
+.HomePageContent h1{
+  font-size: 60px;
+  margin-top: 20px;
+
+}
+
+.HomePageContent h4{
+  margin: 20px auto;
+  line-height: 25px;
+  font-weight: 100;
+}
+
+.HomePageContent button{
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #009688;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  font-size: 20px;
+}
+
+.buttonSpan{
+  background: #009688;
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.HomePageContent button:hover .buttonSpan{
+  width: 100%;
+}
+
+.HomePageContent button:hover{
+  border: none;
+}
+
+/* ALREADY PRESENT RECIEPE */
+
+.Recipies{
+  margin: 2% 10% 5% 10%;
+
+}
+
+.ReciepeCard{
+  margin: 10%;
+  box-shadow: 0 8px 16px 0 rgba(65, 47, 47, 0.6), 0 10px 25px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+.cardImage{
+  height: 250px;
+}
+
+
+
+.FoodChefRecipe{
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  height: 350vh;
+}
+
+.HeadingFoodChefRecipies{
+  background-color: #52006A;
+  height: 60px;
+  color: beige;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0.5%;
+}
+
+.searchBar{
+  margin: 2% 10% 5% 12% ;
+}
+
+.searchButton{
+  width: 200px;
+  padding: 10px 0;
+  text-align: center;
+  margin: 0px 5px;
+  border-radius: 25px;
+  font-weight: bolder;
+  border: 2px solid #009688;
+  background: #009688;
+  color: white;
+  cursor: pointer;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+.Leftsideimg{
+  height: 570px;
+  width: 550px;
+  padding: 5%;
+  margin: 5%;
+  border-radius: 50px;
+}
+
+
+.rightPara{ 
+  padding: 5%;
+  margin: 5%;
+}
+
+
+.aboutRecipePage{
+  background-color: rgb(152, 233, 229);
+  height: 140vh;
+  width: 100%;
+}
+
+.recipeDetails{
+  padding: 5%;
+  margin-right: 10%;
+  line-height: 1.5;
+  color: rgb(240, 63, 63);
+}
+
+.eachLine{
+  margin: 5%;
+}
+
+.recipeNavbar{
+  width: 100%;
+}
+
+@media(max-width : 700px){
+  .aboutRecipePage{
+    height: 230vh;
+  }
+
+  .Leftsideimg{
+    margin: 0;
+    width: 100%;
+  }
+}
+
+
+
+
