@@ -210,14 +210,37 @@
 
 @media(min-width : 700px){
   .aboutRecipePage{
-    height: 100vh;
+    height: auto;
+  }
+
+  .BrandName{
+    font-size: 2.25rem !important;
+  }
+
+  .navLinks{
+    font-size: 2rem !important;
+  }
+  
+  
+  .HomePageContent button{
+    width: 400px;
+    font-size: 35px;
+  }
+
+  .socialIcons{
+    font-size: 40px;
   }
 
   .Leftsideimg{
     margin: 0;
     width: 100%;
   }
+
+  .eachLine{
+    font-size: 30px;
+  }
 }
+
 
 
 
