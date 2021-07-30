@@ -12,7 +12,7 @@
 
 .BrandName{
   text-decoration: solid;
-  font-size: 20px;
+  font-size: 20px !important;
   font-weight: bolder;
 }
 
@@ -124,6 +124,8 @@
 
 
 
+
+
 .FoodChefRecipe{
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
   height: 350vh;
@@ -195,7 +197,6 @@
 
 .Footer{
   height: auto;
-  padding: 2%;
   background-color: antiquewhite;
 }
 
@@ -204,11 +205,35 @@
   font-size: 25px;
 }
 
-.copyrightText{
-  margin: 2%;
+.FoodPictures{
+  padding: 7% 15%;
+  margin: 0% 3%;
 }
 
-@media(min-width : 700px){
+
+.foodpicCard{
+  margin:3% 2%;
+  font-family: 'Pacifico', cursive;
+  font-size: 25px;
+  width: 18rem;
+}
+
+
+.foodPicturesHeading{
+  padding: 1% 15%;
+  margin: 2% 15%;
+  background-color: #acf2e4;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+
+
+
+@media(max-width : 1028px){
   .aboutRecipePage{
     height: auto;
   }
@@ -224,7 +249,7 @@
   
   .HomePageContent button{
     width: 400px;
-    font-size: 35px;
+    font-size: 35px ;
   }
 
   .socialIcons{
@@ -239,6 +264,17 @@
   .eachLine{
     font-size: 30px;
   }
+
+  .eachCard{
+    margin-left: 9%;
+  }
+
+  .foodpicCard{
+    width: 30rem;
+  }
+  
+
+  
 }
 
 

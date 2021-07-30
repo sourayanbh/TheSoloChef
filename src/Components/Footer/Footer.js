@@ -8,7 +8,6 @@ import {
   faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
   return (
@@ -18,6 +17,7 @@ function Footer() {
           <Col lg={12} md={12} sm={12}>
             <div>
               <FontAwesoneIcons iconname={faTwitter} />
+
               <FontAwesoneIcons iconname={faFacebook} />
               <FontAwesoneIcons iconname={faLinkedin} />
               <FontAwesoneIcons iconname={faGoogle} />
