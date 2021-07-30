@@ -174,7 +174,7 @@
 
 .aboutRecipePage{
   background-color: rgb(152, 233, 229);
-  height: 140vh;
+  height: auto;
   width: 100%;
 }
 
@@ -208,9 +208,9 @@
   margin: 2%;
 }
 
-@media(max-width : 700px){
+@media(min-width : 700px){
   .aboutRecipePage{
-    height: auto;
+    height: 100vh;
   }
 
   .Leftsideimg{

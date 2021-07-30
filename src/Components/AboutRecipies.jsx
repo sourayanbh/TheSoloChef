@@ -25,8 +25,9 @@ function AboutRecipes() {
           </Col>
         </Row>
 
-        <Footer />
+        
       </div>
+      <Footer />
     </>
   );
 }
