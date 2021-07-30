@@ -2,6 +2,7 @@ import React from "react";
 import { Row, Col } from "react-bootstrap";
 import LeftSide from "./AboutRecipiesDetails/LeftSide";
 import RightSide from "./AboutRecipiesDetails/RightSide";
+import Footer from "./Footer/Footer";
 import MyNavbar from "./Navbar";
 
 function AboutRecipes() {
@@ -23,6 +24,8 @@ function AboutRecipes() {
             </div>
           </Col>
         </Row>
+
+        <Footer />
       </div>
     </>
   );

@@ -1,6 +1,7 @@
 import MainPage from './MainPage';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Components/FontAwesmeLibrary/Index'
 import { Provider } from "react-redux";
 import store from './Components/Redux/Store/recipeStore';
 

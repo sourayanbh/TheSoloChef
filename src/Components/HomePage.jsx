@@ -2,6 +2,7 @@ import React from "react";
 import { useHistory } from "react-router";
 import MainDetails from "./HomePageComp/MainDetails";
 import MyNavbar from "./Navbar";
+import Footer from "./Footer/Footer";
 
 function HomePage() {
   const history = useHistory();
@@ -12,6 +13,7 @@ function HomePage() {
   };
 
   return (
+    <>
     <div className="HomePage">
       <MyNavbar />
 
@@ -23,6 +25,10 @@ function HomePage() {
         />
       </div>
     </div>
+
+    <Footer />
+    
+    </>
   );
 }
 

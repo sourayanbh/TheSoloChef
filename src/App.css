@@ -193,9 +193,24 @@
   width: 100%;
 }
 
+.Footer{
+  height: auto;
+  padding: 2%;
+  background-color: antiquewhite;
+}
+
+.socialIcons{
+  margin: 3%;
+  font-size: 25px;
+}
+
+.copyrightText{
+  margin: 2%;
+}
+
 @media(max-width : 700px){
   .aboutRecipePage{
-    height: 230vh;
+    height: auto;
   }
 
   .Leftsideimg{
