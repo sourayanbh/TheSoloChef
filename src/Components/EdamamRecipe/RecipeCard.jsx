@@ -3,6 +3,8 @@ import { Fragment } from "react";
 import { Card } from "react-bootstrap";
 import Button from "../Button/Button";
 import axios from "axios";
+import { useHistory } from "react-router";
+
 
 import RecipeModal from "./RecipeModal";
 
@@ -11,6 +13,9 @@ function RecipeCard(props) {
   
   const [recipeDetails, setRecipeDetails] = useState([]);
   const [loading,isLoading] = useState(false)
+
+  
+  const history = useHistory()
 
   
 
@@ -36,6 +41,11 @@ function RecipeCard(props) {
     setModalShow(true);
   };
 
+
+  const GoToPage = () => {
+    history.push(`/EachFood/${props.query}/${props.id}`)
+  }
+
   return (
     <Fragment>
       <Card className="ReciepeCard">
@@ -59,6 +69,7 @@ function RecipeCard(props) {
               recipeLoad = {loading}
             />
           </Card.Text>
+          <Button goTo={GoToPage} buttonName="View Full Details"/>
         </Card.Body>
       </Card>
     </Fragment>
