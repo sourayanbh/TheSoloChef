@@ -52,8 +52,8 @@ function RecipeCard(props) {
 
   return (
     <Fragment>
-      <Card className="ReciepeCard" onClick={cardClicked}>
-        <Card.Img className="cardImage" variant="top" src={props.imageSRC} />
+      <Card className="ReciepeCard" >
+        <Card.Img onClick={cardClicked} className="cardImage" variant="top" src={props.imageSRC} />
         <Card.Body>
           <Card.Title>{props.reciepeName}</Card.Title>
 
