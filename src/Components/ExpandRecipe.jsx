@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import MyNavbar from "./Navbar";
-import { Spinner } from "react-bootstrap";
+import { Spinner,Row,Col } from "react-bootstrap";
 
 function ExpandRecipe() {
   const params = useParams();
@@ -71,26 +71,34 @@ function ExpandRecipe() {
               <strong>Ingredients</strong>
             </h3>
 
-            <ol>
+            <ul>
               {recipeName.ingredients.map((ingre) => {
                 return (
                   <div>
+                  <Row>
+                    <Col lg={6} >
                     <strong>
-                      <li style={{ margin: "5%" }}>
+                      <li className="inredientsDet">
                         {ingre.text}, Amount : {ingre.weight}
                       </li>
                     </strong>
+                    </Col>
+                    <Col lg={6}>
                     <img
-                      style={{ marginLeft: "5%", width: "400px" }}
+                      className="recipeimagedet"
                       src={ingre.image}
                       alt="ingrdinetImage"
                     />
+                    </Col>
+                  </Row>
+                    
+                    
                   </div>
                 );
               })}
-            </ol>
+            </ul>
 
-            <h6 style={{ margin: "10%" }}><a href={recipeName.url}>Want to know More?</a></h6>
+            <h6 className="gotoOtherRecipePageLink"><a href={recipeName.url}><strong>Want to explore More ! Click Here</strong></a></h6>
             
           </div>
         ) : (

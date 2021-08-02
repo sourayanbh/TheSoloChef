@@ -236,7 +236,8 @@
 .expandRecipeWholePage{
   background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
  background-blend-mode: screen;
-  height: 900vh;
+ min-height: 100vh; 
+ height: auto;
   text-align:left ;
 }
 
@@ -254,7 +255,8 @@
 .recipePic{
   width: 600px;
   height: 400px;
-  margin : 6%;
+  margin-right : 6%;
+  margin-top: 3%;
 }
 
 .cuisinetype{
@@ -266,6 +268,28 @@
 }
 
 
+.inredientsDet{
+  margin: 5%;
+  padding: 15%;
+}
+
+.recipeimagedet{
+  margin: 5%;
+   width: 300px;
+   height: 200px;
+}
+
+.gotoOtherRecipePageLink{
+  margin: 10%;
+  font-size: 40px;
+}
+
+.gotoOtherRecipePageLink:hover{
+  color: yellow;
+}
+
+
+
 
 
 
@@ -273,6 +297,16 @@
 @media(max-width : 1028px){
   .aboutRecipePage{
     height: auto;
+  }
+
+  .inredientsDet{
+    margin: auto;
+    padding: auto;
+    font-size: 30px;
+  }
+
+  .recipeimagedet{
+    margin-left: 14%;
   }
 
   .FoodChefRecipe{

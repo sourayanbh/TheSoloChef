@@ -46,9 +46,13 @@ function RecipeCard(props) {
     history.push(`/EachFood/${props.query}/${props.id}`)
   }
 
+  const cardClicked = () => {
+    history.push(`/EachFood/${props.query}/${props.id}`)
+  }
+
   return (
     <Fragment>
-      <Card className="ReciepeCard">
+      <Card className="ReciepeCard" onClick={cardClicked}>
         <Card.Img className="cardImage" variant="top" src={props.imageSRC} />
         <Card.Body>
           <Card.Title>{props.reciepeName}</Card.Title>
