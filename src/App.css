@@ -158,6 +158,9 @@
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.searchButton:hover{
+  background-color: #17d3c0;
+}
 
 
 .Leftsideimg{
@@ -286,6 +289,18 @@
 
 .gotoOtherRecipePageLink:hover{
   color: yellow;
+}
+
+
+.viewFullRecipeText{
+  color: #009688;
+  margin-top: 2%;
+}
+
+.viewFullRecipeText:hover{
+  color: #17d3c0 ;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 

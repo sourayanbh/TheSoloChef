@@ -73,7 +73,9 @@ function RecipeCard(props) {
               recipeLoad = {loading}
             />
           </Card.Text>
-          <Button goTo={GoToPage} buttonName="View Full Details"/>
+          {/* <Button goTo={GoToPage} buttonName="View Full Details"/> */}
+              <h5 className="viewFullRecipeText" onClick={GoToPage}>View Full Recipe {'>>'}</h5>
+
         </Card.Body>
       </Card>
     </Fragment>
