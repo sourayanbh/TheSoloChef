@@ -12,6 +12,16 @@ function MainDetails(props) {
         redirectTo={props.redirectTo}
         buttonName="Search Recipes"
       />
+
+      <HomePageButtons
+        redirectTo={props.willGoTO}
+        buttonName="Create Recipes"
+      />
+
+
+      
+
+  
     </Fragment>
   );
 }

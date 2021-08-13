@@ -6,7 +6,8 @@ import Button from "../Button/Button";
 import RecipeCard from "./RecipeCard";
 import { showRecipies } from "../Redux/Action/Actions";
 import { useDispatch, useSelector } from "react-redux";
-import Footer from "../Footer/Footer";
+import { useHistory } from "react-router";
+
 
 function FoodChefRecipies() {
   const [query, setQuery] = useState("chicken");
@@ -14,6 +15,7 @@ function FoodChefRecipies() {
   const [loading, isLoading] = useState(false);
   const allrecipies = useSelector((state) => state.recipies);
   const dispatch = useDispatch();
+  const history = useHistory()
 
   const API_ID = "f56ed8e0";
   const API_KEY = "d7d934f9d6acacd3d3eeab43291f2952";
@@ -53,8 +55,11 @@ function FoodChefRecipies() {
 
   console.log("Recipies", allrecipies);
 
+  
+
   return (
     <>
+        
       <div>
         <div className="FoodChefRecipe">
           <h1 className="HeadingFoodChefRecipies">Our Recipies</h1>

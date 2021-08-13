@@ -4,6 +4,8 @@ import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import AboutRecipes from './Components/AboutRecipies';
 import FoodChefRecipies from './Components/EdamamRecipe/FoodChefRecipies'
 import ExpandRecipe from './Components/ExpandRecipe';
+import CreateRecipe from './Components/filterSearch/FilterSearch';
+
 
 function MainPage() {
 
@@ -17,6 +19,9 @@ function MainPage() {
                 <Route path="/aboutRecipes" component={AboutRecipes} />
                 <Route path = "/FoodChefRecipies" component={FoodChefRecipies} />
                 <Route path="/EachFood/:Query/:id" component={ExpandRecipe} />
+                <Route path="/CreateRecipe" component={CreateRecipe} />
+
+                
             </Switch>
 
         </Router>

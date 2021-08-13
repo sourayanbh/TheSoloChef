@@ -71,19 +71,21 @@
 }
 
 .HomePageContent button{
-  width: 200px;
+  width: 300px;
+  height: 100px;
   padding: 15px 0;
   text-align: center;
   margin: 20px 10px;
   border-radius: 25px;
   font-weight: bold;
+  font-size: 30px;
   border: 2px solid #009688;
   background: transparent;
   color: white;
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  font-size: 20px;
+
 }
 
 .buttonSpan{
@@ -306,6 +308,44 @@
 
 
 
+/* CreateRecipe */
+
+.createReciepe{
+  background-color: #66DE93;
+  height: 200vh;
+  width: auto;
+}
+
+.createReciepe h1{
+  margin-bottom: 2%;
+  font-weight: bolder;
+  color: white;
+}
+
+.createRecipeForm{
+  padding: 4% 15%;
+}
+
+.form{
+  padding: 2% 5%;
+  border: 2px solid gray;
+}
+
+.recipecreatedCard{
+  margin : 2% 35%;
+  width : 30rem;
+  font-weight: bolder;
+  line-height: 1.5;
+}
+
+.recipecreatedCard .recipeTitie{
+  font-size: 40px;
+  font-weight: bolder;
+  line-height: 3;
+}
+
+
+
 
 
 
@@ -369,10 +409,37 @@
   }
 
   .expandRecipeWholePage{
-    min-height: 100vh;
+    min-height: 120vh;
     height: auto;
   }
+
+  .createReciepe{
+    background-color: #66DE93;
+    min-height: 100vh;
+    height: auto;
+    width: auto;
+  }
   
+  .createReciepe h1{
+    font-size: 50px;
+  }
+
+  .form{
+    font-size: 40px;
+    height: auto;
+    line-height: 3.5;
+  }
+
+  .recipecreatedCard{
+    margin : 2% 18%;
+    width : 40rem;
+    font-size: 35px;
+  }
+
+  .recipeTitie{
+    font-size: 35px !important;
+    font-weight: bolder !important;
+  }
 }
 
 
