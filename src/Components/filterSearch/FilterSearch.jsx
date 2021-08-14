@@ -19,7 +19,7 @@ let checkLen = false
 function CreateRecipe() {
   const recipies = [];
   
- const [showData,setShowData] = useState(true)
+ const [showData,setShowData] = useState(checkLen)
   
 
   const [data, getData] = useState({
