@@ -312,7 +312,7 @@
 
 .createReciepe{
   background-color: #66DE93;
-  height: 200vh;
+  height: 230vh;
   width: auto;
 }
 
@@ -336,6 +336,7 @@
   width : 30rem;
   font-weight: bolder;
   line-height: 1.5;
+  
 }
 
 .recipecreatedCard .recipeTitie{
