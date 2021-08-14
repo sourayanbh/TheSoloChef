@@ -1,37 +1,27 @@
 import React, { useState } from "react";
-import { Form, Button, Card } from "react-bootstrap";
+import { Form, Button,  Card } from "react-bootstrap";
 import MyNavbar from "../Navbar";
 
-const allRecipies = JSON.parse(localStorage.getItem("recipeDetails"));
-let checkLen = false
-
-// const myArrayLen = allRecipies.length;
-  if((Array.isArray(allRecipies) && allRecipies.length) )
-  {
-    checkLen = true   
-  }
-  else{
-    checkLen = false
-  }
-
-  
-
 function CreateRecipe() {
-  const recipies = [];
-  
- const [showData,setShowData] = useState(checkLen)
-  
-
   const [data, getData] = useState({
     recipeName: "",
     cuisineType: "",
     dishType: "",
     recipeingredients: "",
+    
   });
 
-  console.log(checkLen)
-
+  const [showCard, setShowCard] = useState(false);
   
+  
+
+  const [details, setDetails] = useState({
+    name: "",
+    cuisine: "",
+    dish: "",
+    ingredients: "",
+    
+  });
 
   const getRecipeDetails = (e) => {
     getData((prevVal) => {
@@ -42,22 +32,64 @@ function CreateRecipe() {
     });
   };
 
-  const saveDetails = (e) => {
-    e.preventDefault();
-
-    recipies.push(data);
-
-    localStorage.setItem("recipeDetails", JSON.stringify(recipies));
-
-    setShowData(checkLen)
-  };
-
   const deleteRecipe = () => {
     localStorage.clear();
-    setShowData(!checkLen)
+    localStorage.removeItem("recipeName");
+    localStorage.removeItem("dishtype");
+    localStorage.removeItem("cuisineType");
+    localStorage.removeItem("recipeingredients");
+    setShowCard(false);
+    
   };
 
   
+
+  const saveDetails = (e) => {
+
+    e.preventDefault()
+
+    
+    
+    localStorage.setItem("recipeName", data.recipeName);
+    localStorage.setItem("cuisineType", data.cuisineType);
+    localStorage.setItem("dishtype", data.dishType);
+    localStorage.setItem("recipeingredients", data.recipeingredients);
+
+
+    
+    
+
+    const NAME = localStorage.getItem("recipeName");
+    const DISHTYPE = localStorage.getItem("dishtype");
+    const CUISINE = localStorage.getItem("cuisineType");
+    const INGRE = localStorage.getItem("recipeingredients");
+    
+
+    
+    setDetails({
+      name: NAME,
+      dishtype: DISHTYPE,
+      cuisine: CUISINE,
+      ingre: INGRE,
+      
+    });
+
+    setShowCard(true);
+    alert("Recipe Saved")
+
+    getData({
+        recipeName : "",
+        cuisineType : "",
+        dishType : "",
+        recipeingredients : "",
+
+    })
+    
+  };
+
+
+  
+
 
   
 
@@ -125,44 +157,44 @@ function CreateRecipe() {
               />
             </Form.Group>
 
-            <Button variant="primary" type="submit" onClick={saveDetails}>
+            
+
+            <Button variant="primary" type="submit"  onClick={saveDetails}>
               Save Recipe
             </Button>
           </Form>
         </div>
 
+        <div>
 
+          {showCard ? (
+              <div className="recipecreatedCard">
+              <h2 style={{margin:"10%",fontWeight:"bolder"}}>Your Recipe</h2>
+              <Card  >
+              <Card.Img variant="top" src={details.image} />
+              <Card.Body>
+                <Card.Title className="recipeTitie" >{details.name}</Card.Title>
+                <Card.Text>Cuisine Type :{details.cuisine}</Card.Text>
+                <Card.Text>Dish Type : {details.dishtype}</Card.Text>
+                <Card.Text>Ingredients :{details.ingre}</Card.Text>
+                <Button variant="primary" type="submit" onClick={deleteRecipe}>
+                  Delete
+                </Button>
+              </Card.Body>
 
-            {showData ?<div>{allRecipies.map((reci) => {
-            return (
-              <div>
-
-              <Card className="recipecreatedCard">
-                <Card.Title className="recipeTitie">{reci.recipeName}</Card.Title>
-                <Card.Body>Cuisine  : {reci.cuisineType}</Card.Body>
-                <Card.Body>DishType : {reci.dishType}</Card.Body>
-                <Card.Body>Ingredients : {reci.recipeingredients}</Card.Body>
-                <Button onClick={deleteRecipe}>Delete</Button>
-              </Card>
               
+            </Card>
               </div>
-              
-            )
-          })}</div>  : <h1>No Recipies Found,Please Add</h1>}
 
-
-          
-
-          
-
-        
+          ) : (
+            <h1>
+              No recipies to show,Please Enter Recipe Details to save a Recipe
+            </h1>
+          )}
+        </div>
       </div>
     </>
   );
 }
 
 export default CreateRecipe;
-
-
-
-
